@@ -6,8 +6,8 @@ namespace project_emih
 {
     internal class InvisionConfig
     {
-        public string OpenAI_Api_Key { get; set; }
-        public string Discord_Bot_Token { get; set; }
+        public string OpenAI_Api_Key = "";
+        public string Discord_Bot_Token = "";
         public ulong Discord_App_Id { get; set; }
         public int Dalle_Images_Per_Request = 1;
         public string Dalle_Image_Size = "1024x1024";

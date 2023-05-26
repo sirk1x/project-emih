@@ -25,23 +25,32 @@ namespace project_emih
             {
                 GatewayIntents = GatewayIntents.AllUnprivileged | GatewayIntents.MessageContent
             });
-
+            _client.Log += _client_Log;
             CommandService = new CommandService();
             CommandHandler = new CommandHandler(_client);
             Create();
             _client.Ready += _client_Ready;
-            
+
             var invite = string.Format(
                 "https://discord.com/api/oauth2/authorize?client_id={0}&permissions={1}&scope=bot%20applications.commands",
-                InvisionConfig.Current.Discord_App_Id, 
+                InvisionConfig.Current.Discord_App_Id,
                 534727096384);
             File.WriteAllText(Directory + "//invite.txt", invite);
+        }
+
+        private Task _client_Log(LogMessage msg)
+        {
+
+            Console.WriteLine(msg.ToString());
+            return Task.CompletedTask;
+
         }
 
         private async Task _client_Ready()
         {
             await _client.SetStatusAsync(InvisionConfig.Current.BotStatus);
             await _client.SetGameAsync(InvisionConfig.Current.BotGame);
+            Console.WriteLine("Bot Online!");
         }
 
         private async void Create()
