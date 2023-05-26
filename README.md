@@ -62,7 +62,7 @@ systemctl start emih
 ```
 ### Configuration
 Emih will create configuration files on the first run. 
-Simply edit the ```config.json``` inside emihs folder and add the discord app id, bot token and the OpenAI API key. 
+Simply edit the ```config.json``` inside emihs folder and add the [Discord](https://discord.com/developers/applications) app id, bot token and the [OpenAI API](https://platform.openai.com/account/api-keys) key. 
 Configure other parameters as needed.
 Restart the bot to apply the changes. 
 ```
