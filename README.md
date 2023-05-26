@@ -87,6 +87,13 @@ cat /opt/emih/invite.txt
 Upon inviting emih to a discord server, run the command ```/auth``` somehwere in the server. 
 If you aren't authenticated as a admin yet, the bot will display your user id. 
 Copy the user id and replace the 0 inside the admins.json or add more admins if needed.
+```sh
+[
+  YOUR_USER_ID,
+  ANOTHER_USER_ID,
+  ...
+]
+```
 Restart the bot to apply the changes. 
 ```
 systemctl restart emih
