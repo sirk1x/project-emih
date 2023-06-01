@@ -2,7 +2,7 @@
 using Discord;
 using System.Net;
 
-namespace dcord_ivisionAI_emih_dalle2
+namespace project_emih
 {
     static class IVHelper
     {
@@ -31,10 +31,7 @@ namespace dcord_ivisionAI_emih_dalle2
         }
         public static Embed ReturnError(string msg)
         {
-            return new EmbedBuilder()
-                .WithTitle("Error")
-                .WithDescription(msg)
-                .WithColor(Color.Red).Build();
+            return ReturnMessage("Error", msg, Color.Red);
         }
         public static Embed ReturnMessage(string title, string msg, Color clr)
         {

@@ -7,9 +7,6 @@ namespace project_emih
 {
     internal class Invision
     {
-        public static IAudioClient AudioClient;
-
-
         public static string Directory = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
         public static string ImageDir = Directory + "//img//";
         public static Authenticator<ulong> GuildAuthenticator = new Authenticator<ulong>(Directory + "//serverauth.json");

@@ -1,5 +1,5 @@
 ﻿using project_emih;
-using dcord_ivisionAI_emih_dalle2;
+using project_emih;
 using Discord;
 using Discord.Commands;
 using Discord.Net;
